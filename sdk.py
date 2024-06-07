@@ -37,3 +37,5 @@ cls()
 print("Welcome to the Basic Python Toolkit\n")
 
 hiw("You can highlight text by using hiw()")
+
+print(Back.WHITE + Fore.BLACK + hw + Fore.RESET + Back.RESET)
