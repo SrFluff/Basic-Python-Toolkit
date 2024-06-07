@@ -2,7 +2,7 @@
 
 You have to go to https://pypi.org/project/colorama/ to download the colorama package, unzip the file, and move the colorama file to the same directory as the sdk.py file.
 
-#Current functions
+# Current functions
 
 1. Basic math
   - Provides an easy way to add, subtract, divide, and multiply 2 numbers.
