@@ -1,3 +1,5 @@
+main = 0
+
 import os
 
 #Imports socket, allows you to fetch your IP adress
@@ -13,6 +15,16 @@ import time
 #Adds the datetime plugin that makes it possible to display date and time
 
 import datetime
+
+#Allows you to set a custom exit messasge when you call this function
+
+def emes(ems):
+
+    cls()
+
+    print(ems)
+
+    exit()
 
 #A more human-friendly version of time.sleep
 
@@ -39,7 +51,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.2.0"
+sdkver = "1.3.0"
 
 #prints the current PBT version, made for providing credit
 
@@ -117,9 +129,11 @@ print("You can get your OS by using getsys()\n")
 
 print("Use the wait() function to wait a certain about of seconds\n")
 
-print("By using the timed() you can print the time in 12h AM PM, by using date() you'll print the weekday, month, day of the month, and year. And by using datetime() you'll print both together\m")
+print("By using the timed() you can print the time in 12h AM PM, by using date() you'll print the weekday, month, day of the month, and year. And by using datetime() you'll print both together\n")
 
 print("If you use the ip() function, you'll print your current IP address\n")
+
+print("If you want to set a custom message to display when you end the program, use the emes() function.")
 
 wait(2)
 
@@ -139,4 +153,123 @@ ip()
 
 a = input("> ")
 
-exit()
+main = 1
+
+s = 1
+
+bptte = 0
+
+while main:
+
+    cls()
+
+    if s == 1:
+
+        hiw("[1] Enter terminal environment")
+        print("[2] About BPT terminal")
+        print("[3] Exit\n")
+
+    if s == 2:
+
+        print("[1] Enter terminal environment")
+        hiw("[2] About BPT terminal")
+        print("[3] Exit\n")
+
+    if s == 3:
+
+        print("[1] Enter terminal environment")
+        print("[2] About BPT terminal")
+        hiw("[3] Exit\n")
+    
+    a = input("> ")
+
+    if a == "1":
+
+        s = 1
+
+    if a == "2":
+
+        s = 2
+
+    if a == "3":
+
+        s = 3
+
+    if a == "" and s == 1:
+
+        cls()
+
+        main = 0
+
+        bptte = 1
+
+        cls()
+
+        print("Type 'help' for a list of commands")
+    
+    if a == "" and s == 2:
+
+        s = 1
+
+        cls()
+
+        print("The Basic Python Toolkit Terminal Environment, or BPTTE, is a basic")
+        print("terminal emulator, that comes with some commands. This also lets")
+        print("you run some BPT commands like 'ipget' and 'getsys'.\n")
+
+        a = input("> ")
+
+        cls()
+
+    if a == "" and s == 3:
+
+        cls()
+
+        exit()
+
+while bptte:
+
+    a = input("> ")
+
+    if a == "help":
+
+        print("getip    -- prints your current IP adress")
+        print("cls      -- clears the screen")
+        print("time     -- prints the current time")
+        print("date     -- prints the date")
+        print("datetime -- prints the time and date")
+        print("getsys   -- prints your current OS")
+        print("credits  -- prints the credits")
+        print("exit     -- closes this instance of BPTTE\n")
+
+    if a == "getip":
+
+        ip()
+
+    if a == "cls":
+
+        cls()
+
+    if a == "time":
+
+        timed()
+
+    if a == "date":
+
+        date()
+
+    if a == "datetime":
+
+        datetime()
+
+    if a == "getsys":
+
+        getsys()
+
+    if a == "credits":
+
+        credits()
+
+    if a == "exit":
+
+        emes("Thanks for using The Basic Python Toolkit Terminal Environment\n")
