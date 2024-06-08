@@ -40,7 +40,13 @@ You have to go to https://pypi.org/project/colorama/ to download the colorama pa
 
   - You can print your current IP address with the ip() function
 
+11. Exit messages
+
+  - To set an exit message you can use emes() to set one, and call it when you want to close the program.
+
 # Patch-notes
+
+1.3.0 - Added emes() and a terminal environment
 
 1.2.0 - Added timed(), date(), timedate(), and ip()
 
