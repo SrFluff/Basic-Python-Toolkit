@@ -45,7 +45,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.4.0"
+sdkver = "1.4.1"
 
 #prints the current PBT version, made for providing credit
 
