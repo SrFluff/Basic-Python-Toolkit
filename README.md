@@ -1,6 +1,6 @@
 # How to use the color functions
 
-You have to go to https://pypi.org/project/colorama/ to download the colorama package, unzip the file, and move the colorama file to the same directory as the sdk.py file.
+You have to install the Colorama library through Pip, or your operating systems' package manager.
 
 # Current functions
 
