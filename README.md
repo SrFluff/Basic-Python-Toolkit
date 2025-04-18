@@ -40,8 +40,15 @@ You have to go to https://pypi.org/project/colorama/ to download the colorama pa
 
   - To set an exit message you can use emes() to set one, and call it when you want to close the program.
 
+11. Error message
+  - Prints a spoof error message, you can choose whether it uses `print()` or `return` the error message. It needs Colorama by the way
 # Patch-notes
 
+<<<<<<< HEAD
+1.5.1 - Actually removed all text reffering to the `ip()` function, and added the `error` function
+
+=======
+>>>>>>> 0b9f9779d82d9b1500931626de48067386033acb
 1.4.1 - Removed some unnecessary imports
 
 1.4.0 - Switch functions from `print()` to `return`. Removed `getip()`

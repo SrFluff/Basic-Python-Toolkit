@@ -45,7 +45,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.4.1"
+sdkver = "1.5.1"
 
 #prints the current PBT version, made for providing credit
 
@@ -97,8 +97,7 @@ def datetime():
 try:
     from colorama import Back, Fore
 except ImportError:
-    print("Hey, by the way, you need Colorama to run this project, to install use pip, or apt :)")
-    exit()
+    emes("Hey, by the way, you need Colorama to run this project, to install use pip, or apt :)")
 
 #Prints highlighted text
 
@@ -107,6 +106,17 @@ def hiw(hw):
 # Resets the background color and text color
 
     print(Back.WHITE + Fore.BLACK + hw + Fore.RESET + Back.RESET)
+
+# Prints an error message
+
+def error(text="No error message",printf=True):
+    
+    # You can either print or return
+
+    if printf:
+        print(Fore.RED + "ERROR: " + text + Fore.RESET)
+    else:
+        return Fore.RED + "ERROR: " + text + Fore.RESET
 
 cls()
 
@@ -122,7 +132,6 @@ print("Use the wait() function to wait a certain about of seconds\n")
 
 print("By using the timed() you can print the time in 12h AM PM, by using date() you'll print the weekday, month, day of the month, and year. And by using datetime() you'll print both together\n")
 
-print("If you use the ip() function, you'll print your current IP address\n")
 
 print("If you want to set a custom message to display when you end the program, use the emes() function.")
 
@@ -200,7 +209,7 @@ while main:
 
         print("The Basic Python Toolkit Terminal Environment, or BPTTE, is a basic")
         print("terminal emulator, that comes with some commands. This also lets")
-        print("you run some BPT commands like 'ipget' and 'getsys'.\n")
+        print("you run some BPT commands like 'error' and 'getsys'.\n")
 
         a = input("> ")
 
@@ -223,6 +232,7 @@ while bptte:
         print("date     -- prints the date")
         print("datetime -- prints the time and date")
         print("getsys   -- prints your current OS")
+        print("error    -- prints a spoof error message")
         print("credits  -- prints the credits")
         print("exit     -- closes this instance of BPTTE\n")
 
@@ -230,26 +240,30 @@ while bptte:
 
         cls()
 
-    if a == "time":
+    elif a == "time":
 
         print(timed())
 
-    if a == "date":
+    elif a == "date":
 
         print(date())
 
-    if a == "datetime":
+    elif a == "datetime":
 
         print(datetime())
 
-    if a == "getsys":
+    elif a == "getsys":
 
         print(getsys())
 
-    if a == "credits":
+    elif a == "credits":
 
         credits()
+    
+    elif a == "error":
+        b = input("Error message: ")
+        error(b)
 
-    if a == "exit":
+    elif a == "exit":
 
         emes("Thanks for using The Basic Python Toolkit Terminal Environment\n")
