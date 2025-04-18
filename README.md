@@ -46,6 +46,10 @@ You have to go to https://pypi.org/project/colorama/ to download the colorama pa
 
 # Patch-notes
 
+1.4.1 - Removed some unnecessary imports
+
+1.4.0 - Switch functions from `print()` to `return`. Removed `getip()`
+
 1.3.0 - Added emes() and a terminal environment
 
 1.2.0 - Added timed(), date(), timedate(), and ip()
