@@ -1,6 +1,6 @@
 # How to use the color functions
 
-You have to install the Colorama library through Pip, or your operating systems' package manager.
+You have to install the Colorama library through Pip, or your operating system's package manager.
 
 # Current functions
 
