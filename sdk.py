@@ -2,12 +2,6 @@ main = 0
 
 import os
 
-#Imports socket, allows you to fetch your IP adress
-
-import socket
-
-hostname = socket.gethostname()
-
 #Adds the time plugin, this allows us to wait a certain number of second
 
 import time
