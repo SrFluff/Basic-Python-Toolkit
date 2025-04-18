@@ -47,17 +47,17 @@ def getsys():
 
         sys = "Unix-like"
 
-    print(sys)
+    return sys
 
 #Sets the SDK version
 
-sdkver = "1.3.0"
+sdkver = "1.4.0"
 
 #prints the current PBT version, made for providing credit
 
 def credits():
 
-    print("Basic Python Toolkit version " + sdkver + " By Franco M. (GitHub)")
+    print("Basic Python Toolkit version " + sdkver + " By SrFluff. (GitHub)")
 
 #Screen clearing
 
@@ -66,48 +66,45 @@ def cls():
         os.system("cls")
     else:
         os.system("clear")
-cls()
 
 answer = "1"
 
 #Basic math functions
 
 def add(b, c):
-    print(b + c)
+    return b + c
 def mul(d, e):
-    print(d * e)
+    return d * e
 def sub(f, g):
-    print(f - g)
+    return f - g
 def div(h, i):
-    print(h / i)
+    return h / i
 
 #Using the datetime module it prints the weekday, month, day, and year
 
 def date():
 
-    print(day.strftime("%A") + ", " + day.strftime("%B") + " " + day.strftime("%d") + " " + day.strftime("%Y"))
+    return day.strftime("%A") + ", " + day.strftime("%B") + " " + day.strftime("%d") + " " + day.strftime("%Y")
 
 #Using datetime this prints the time in 12h AM PM
 
 def timed():
 
-    print(day.strftime("%I") + ":" + day.strftime("%M") + ":" + day.strftime("%S") + " " + day.strftime("%P"))
+    return day.strftime("%I") + ":" + day.strftime("%M") + ":" + day.strftime("%S") + " " + day.strftime("%P")
 
 #Using datetime this prints both date and time
 
 def datetime():
 
-    print(day.strftime("%A") + ", " + day.strftime("%B") + " " + day.strftime("%d") + " " + day.strftime("%Y") + " @ " + day.strftime("%I") + ":" + day.strftime("%M") + ":" + day.strftime("%S") + " " + day.strftime("%P"))
-
-#Using sockey it prints your IP
-
-def ip():
-
-    print(socket.gethostbyname(hostname))
+    return day.strftime("%A") + ", " + day.strftime("%B") + " " + day.strftime("%d") + " " + day.strftime("%Y") + " @ " + day.strftime("%I") + ":" + day.strftime("%M") + ":" + day.strftime("%S") + " " + day.strftime("%P")
 
 #Colorama is the plugin required to color or highlight text
 
-from colorama import Back, Fore
+try:
+    from colorama import Back, Fore
+except ImportError:
+    print("Hey, by the way, you need Colorama to run this project, to install use pip, or apt :)")
+    exit()
 
 #Prints highlighted text
 
@@ -137,19 +134,13 @@ print("If you want to set a custom message to display when you end the program, 
 
 wait(2)
 
-print("You are using a")
+print(f"You are using a {getsys()} system.\n")
 
-getsys()
+print(date())
 
-print("system.\n")
+print(timed())
 
-date()
-
-timed()
-
-datetime()
-
-ip()
+print(datetime())
 
 a = input("> ")
 
@@ -233,7 +224,6 @@ while bptte:
 
     if a == "help":
 
-        print("getip    -- prints your current IP adress")
         print("cls      -- clears the screen")
         print("time     -- prints the current time")
         print("date     -- prints the date")
@@ -242,29 +232,25 @@ while bptte:
         print("credits  -- prints the credits")
         print("exit     -- closes this instance of BPTTE\n")
 
-    if a == "getip":
-
-        ip()
-
     if a == "cls":
 
         cls()
 
     if a == "time":
 
-        timed()
+        print(timed())
 
     if a == "date":
 
-        date()
+        print(date())
 
     if a == "datetime":
 
-        datetime()
+        print(datetime())
 
     if a == "getsys":
 
-        getsys()
+        print(getsys())
 
     if a == "credits":
 
