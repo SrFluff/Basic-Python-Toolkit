@@ -36,11 +36,7 @@ You have to go to https://pypi.org/project/colorama/ to download the colorama pa
 
   - Use the timedate() function to print both time and date together
 
-10. Getting an ip adress
-
-  - You can print your current IP address with the ip() function
-
-11. Exit messages
+10. Exit messages
 
   - To set an exit message you can use emes() to set one, and call it when you want to close the program.
 
