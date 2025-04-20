@@ -45,7 +45,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.5.1"
+sdkver = "1.7.1"
 
 #prints the current PBT version, made for providing credit
 
@@ -99,7 +99,30 @@ try:
 except ImportError:
     emes("Hey, by the way, you need Colorama to run this project, to install use pip, or apt :)")
 
-#Prints highlighted text
+#Prints colored text
+
+def color(text="",col="w",prin=True):
+    match col:
+        case "w":
+            ret = Fore.WHITE + text + Fore.RESET
+        case "r":
+            ret = Fore.RED + text + Fore.RESET
+        case "g":
+            ret = Fore.GREEN + text + Fore.RESET
+        case "b":
+            ret = Fore.BLUE + text + Fore.RESET
+        case "y":
+            ret = Fore.YELLOW + text + Fore.RESET
+        case "c":
+            ret = Fore.CYAN + text + Fore.RESET
+        case "W":
+            ret = Fore.BLACK + Back.WHITE + text + Fore.RESET + Back.RESET
+    if prin:
+        print(ret)
+    else:
+        return ret
+
+# Prints highlighted text
 
 def hiw(hw):
 
@@ -157,7 +180,12 @@ def init():
             print(datetime())
         elif a == "getsys":
             print(getsys())
+        elif a == "color":
+            a = input("Color (w,r,g,b,y,c,W): ")
+            b = input("Text: ")
+            color(b,a)
         elif a == "exit":
             cls()
             print("Thanks for using the Basic-Python-Toolkit Terminal Environment!\n")
             break
+init()

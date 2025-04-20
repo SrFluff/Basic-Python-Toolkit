@@ -44,9 +44,13 @@ You have to install the Colorama library through Pip, or your operating system's
   - Prints a spoof error message, you can choose whether it uses `print()` or `return` the error message. It needs Colorama by the way.
 
 12. The terminal environment
-  - using `init()` you can start the Basic-Python-Toolkit Terminal Environment, where you can run some commands like `cls` and `error`.
+  - Using `init()` you can start the Basic-Python-Toolkit Terminal Environment, where you can run some commands like `cls` and `error`.
+13. Colored text
+  - You can print(or **return** colored text using the `color()` function, the format goes as follows: `color(text-in-color,color(w,r,g,b,y,c,W),print-if-true(True/False))`
 
 # Patch-notes
+
+1.7.1 - Added the `color()` function. Might eventually remove `hiw()`.
 
 1.6.1 - Minor spelling fixes & reimplemented the BPTTE, now uses a function instead of a variable.
 
