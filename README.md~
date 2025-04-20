@@ -50,8 +50,6 @@ You have to install the Colorama library through Pip, or your operating system's
 
 # Patch-notes
 
-1.7.2 - Removed `init()` from the last line
-
 1.7.1 - Added the `color()` function. Might eventually remove `hiw()`.
 
 1.6.1 - Minor spelling fixes & reimplemented the BPTTE, now uses a function instead of a variable.
