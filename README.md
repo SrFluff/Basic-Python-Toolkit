@@ -34,17 +34,23 @@ You have to install the Colorama library through Pip, or your operating system's
 
 9. Getting both time and date
 
-  - Use the timedate() function to print both time and date together
+  - Use the timedate() function to print both time and date together.
 
 10. Exit messages
 
   - To set an exit message you can use emes() to set one, and call it when you want to close the program.
 
 11. Error message
-  - Prints a spoof error message, you can choose whether it uses `print()` or `return` the error message. It needs Colorama by the way
+  - Prints a spoof error message, you can choose whether it uses `print()` or `return` the error message. It needs Colorama by the way.
+
+12. The terminal environment
+  - using `init()` you can start the Basic-Python-Toolkit Terminal Environment, where you can run some commands like `cls` and `error`.
+
 # Patch-notes
 
-1.5.1 - Actually removed all text reffering to the `ip()` function, and added the `error` function
+1.6.1 - Minor spelling fixes & reimplemented the BPTTE, now uses a function instead of a variable.
+
+1.5.1 - Actually removed all text referring to the `ip()` function, and added the `error` function
 
 1.4.1 - Removed some unnecessary imports
 

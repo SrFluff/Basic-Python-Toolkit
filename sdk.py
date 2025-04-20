@@ -118,152 +118,46 @@ def error(text="No error message",printf=True):
     else:
         return Fore.RED + "ERROR: " + text + Fore.RESET
 
-cls()
+def init():
 
-print("Welcome to the Basic Python Toolkit\n")
+    print("Welcome to the Basic-Python-Toolkit Terminal Environment\n")
+    while True:
 
-hiw("You can highlight text by using hiw()")
+        a = input("$ ")
 
-print(Back.WHITE + Fore.BLACK + Fore.RESET + Back.RESET)
-
-print("You can get your OS by using getsys()\n")
-
-print("Use the wait() function to wait a certain about of seconds\n")
-
-print("By using the timed() you can print the time in 12h AM PM, by using date() you'll print the weekday, month, day of the month, and year. And by using datetime() you'll print both together\n")
-
-
-print("If you want to set a custom message to display when you end the program, use the emes() function.")
-
-wait(2)
-
-print(f"You are using a {getsys()} system.\n")
-
-print(date())
-
-print(timed())
-
-print(datetime())
-
-a = input("> ")
-
-main = 1
-
-s = 1
-
-bptte = 0
-
-while main:
-
-    cls()
-
-    if s == 1:
-
-        hiw("[1] Enter terminal environment")
-        print("[2] About BPT terminal")
-        print("[3] Exit\n")
-
-    if s == 2:
-
-        print("[1] Enter terminal environment")
-        hiw("[2] About BPT terminal")
-        print("[3] Exit\n")
-
-    if s == 3:
-
-        print("[1] Enter terminal environment")
-        print("[2] About BPT terminal")
-        hiw("[3] Exit\n")
-    
-    a = input("> ")
-
-    if a == "1":
-
-        s = 1
-
-    if a == "2":
-
-        s = 2
-
-    if a == "3":
-
-        s = 3
-
-    if a == "" and s == 1:
-
-        cls()
-
-        main = 0
-
-        bptte = 1
-
-        cls()
-
-        print("Type 'help' for a list of commands")
-    
-    if a == "" and s == 2:
-
-        s = 1
-
-        cls()
-
-        print("The Basic Python Toolkit Terminal Environment, or BPTTE, is a basic")
-        print("terminal emulator, that comes with some commands. This also lets")
-        print("you run some BPT commands like 'error' and 'getsys'.\n")
-
-        a = input("> ")
-
-        cls()
-
-    if a == "" and s == 3:
-
-        cls()
-
-        exit()
-
-while bptte:
-
-    a = input("> ")
-
-    if a == "help":
-
-        print("cls      -- clears the screen")
-        print("time     -- prints the current time")
-        print("date     -- prints the date")
-        print("datetime -- prints the time and date")
-        print("getsys   -- prints your current OS")
-        print("error    -- prints a spoof error message")
-        print("credits  -- prints the credits")
-        print("exit     -- closes this instance of BPTTE\n")
-
-    if a == "cls":
-
-        cls()
-
-    elif a == "time":
-
-        print(timed())
-
-    elif a == "date":
-
-        print(date())
-
-    elif a == "datetime":
-
-        print(datetime())
-
-    elif a == "getsys":
-
-        print(getsys())
-
-    elif a == "credits":
-
-        credits()
-    
-    elif a == "error":
-        b = input("Error message: ")
-        error(b)
-
-    elif a == "exit":
-
-        emes("Thanks for using The Basic Python Toolkit Terminal Environment\n")
+        if a == "help":
+            print("help       - Prints the help message")
+            print("cls        - Clears the screen")
+            print("error      - Prints a spoof error message")
+            print("hiw [text] - Prints highlighted text")
+            print("emes       - Prints a message, and exits")
+            print("credits    - Prints the credits")
+            print("date       - Prints the date")
+            print("time       - Prints the time")
+            print("datetime   - Prints both")
+            print("getsys     - Prints the currently detected OS")
+            print("exit       - Exits the Basic-Python-Toolkit-Terminal-Environment\n")
+        elif a == "cls":
+            cls()
+        elif a == "error":
+            b = input("Error message: ")
+            error(a)
+        elif a == "emes":
+            b = input("Message: ")
+            emes(b)
+        elif a.split()[0] == "hiw":
+            hiw(a[4:])
+        elif a == "credits":
+            credits()
+        elif a == "date":
+            print(date())
+        elif a == "time":
+            print(timed())
+        elif a == "datetime":
+            print(datetime())
+        elif a == "getsys":
+            print(getsys())
+        elif a == "exit":
+            cls()
+            print("Thanks for using the Basic-Python-Toolkit Terminal Environment!\n")
+            break
