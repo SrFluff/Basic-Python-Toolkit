@@ -45,7 +45,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.7.2"
+sdkver = "1.8.1"
 
 #prints the current PBT version, made for providing credit
 
@@ -188,3 +188,28 @@ def init():
             cls()
             print("Thanks for using the Basic-Python-Toolkit Terminal Environment!\n")
             break
+try:
+    import pygame
+except ImportError:
+    print("Hey, you need Pygame to run this, install it through pip, or your")
+    print("system's package manager")
+    exit()
+
+# It's a pop-up window, with a warning
+
+def warning(warning="No warning",x=0,y=0):
+    main = True
+    pygame.init()
+    pygame.font.init()
+    pygame.display.set_caption("Warning")
+
+    screen = pygame.display.set_mode((200,100))
+    my_font = pygame.font.SysFont("Consolas",20)
+
+    while main:
+        screen.fill((255,255,255))
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                main = False
+        screen.blit(my_font.render(warning,True,(0,0,0)),(x,y))
+        pygame.display.flip()
