@@ -1,6 +1,6 @@
 # How to use the color functions
 
-You have to install the Colorama library through Pip, or your operating system's package manager.
+You have to install the **Colorama** & **Pygame** libraries through Pip, or your operating system's package manager.
 
 # Current functions
 
@@ -48,9 +48,14 @@ You have to install the Colorama library through Pip, or your operating system's
 13. Colored text
   - You can print(or **return** colored text using the `color()` function, the format goes as follows: `color(text-in-color,color(w,r,g,b,y,c,W),print-if-true(True/False))`
 
+14. Warning window
+  - You can draw a window with a warning message using the `warning()` function. This function does require **Pygame**
+
 # Patch-notes
 
-1.7.2 - Removed `init()` from the last line
+1.8.2 - Added the `warning()` function.
+
+1.7.2 - Removed init() from the last line.
 
 1.7.1 - Added the `color()` function. Might eventually remove `hiw()`.
 
