@@ -1,4 +1,4 @@
-# How to use the color functions
+# Required libraries 
 
 You have to install the **Colorama** & **Pygame** libraries through Pip, or your operating system's package manager.
 
