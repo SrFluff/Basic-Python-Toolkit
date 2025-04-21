@@ -51,7 +51,12 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 14. Warning window
   - You can draw a window with a warning message using the `warning()` function. This function does require **Pygame**
 
+15. Version
+  - The standard way to return the SDK version.
+
 # Patch-notes
+
+1.9.2 - Added the `version()` command, moved `import pygame` inside `def warning()`.
 
 1.8.2 - Added the `warning()` function.
 
