@@ -54,7 +54,12 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 15. Version
   - The standard way to return the SDK version.
 
+16. The music shell
+  - You can initialize a shell where you can play audio with the `musicLoop()` function. You must provide this function with a **path** and a volume(*between 0-1*).
+
 # Patch-notes
+
+1.10.2 - Added the `musicLoop()` function.
 
 1.9.2 - Added the `version()` command, moved `import pygame` inside `def warning()`.
 

@@ -45,7 +45,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.9.2"
+sdkver = "1.10.2"
 
 def version():
     global sdkver
@@ -218,3 +218,31 @@ def warning(warning="No warning",x=0,y=0):
                 main = False
         screen.blit(my_font.render(warning,True,(0,0,0)),(x,y))
         pygame.display.flip()
+def musicLoop(pathToMusic,volume):
+    try:
+        from pygame import mixer
+    except ImportError:
+        print("Woah, you need Pygame to run this, refer to README.md for instructions")
+        exit()
+    mixer.init()
+    mixer.music.load(pathToMusic)
+    mixer.music.set_volume(volume)
+    mixer.music.play()
+    pause = False
+    main = True
+    print("Type 'help' for help")
+    while main:
+        a = input("$ ")
+        if a == "p":
+            if pause:
+                mixer.music.unpause()
+                pause = False
+            else:
+                mixer.music.pause()
+                pause = True
+        elif a == "help":
+            print("p - Pauses and unpauses the song")
+            print("e - Exits the music shell")
+        elif a == "e":
+            mixer.music.stop()
+            main = False
