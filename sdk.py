@@ -145,6 +145,8 @@ def error(text="No error message",printf=True):
     else:
         return Fore.RED + "ERROR: " + text + Fore.RESET
 
+# The BPTTE, I'll add more commands later
+
 def init():
 
     print("Welcome to the Basic-Python-Toolkit Terminal Environment\n")
@@ -218,6 +220,9 @@ def warning(warning="No warning",x=0,y=0):
                 main = False
         screen.blit(my_font.render(warning,True,(0,0,0)),(x,y))
         pygame.display.flip()
+
+# The music shell, I'll add loading and unloading while in the shell later
+
 def musicLoop(pathToMusic,volume):
     try:
         from pygame import mixer
