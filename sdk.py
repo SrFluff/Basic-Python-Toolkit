@@ -45,7 +45,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.10.2"
+sdkver = "1.11.2"
 
 def version():
     global sdkver
@@ -145,8 +145,6 @@ def error(text="No error message",printf=True):
     else:
         return Fore.RED + "ERROR: " + text + Fore.RESET
 
-# The BPTTE, I'll add more commands later
-
 def init():
 
     print("Welcome to the Basic-Python-Toolkit Terminal Environment\n")
@@ -165,9 +163,15 @@ def init():
             print("time       - Prints the time")
             print("datetime   - Prints both")
             print("getsys     - Prints the currently detected OS")
+            print("version    - Prints the current SDK version")
+            print("wait       - Waits a specified amount of seconds")
             print("exit       - Exits the Basic-Python-Toolkit-Terminal-Environment\n")
         elif a == "cls":
             cls()
+        elif a == "wait":
+            wait(int(a))
+        elif a == "version":
+            print(version())
         elif a == "error":
             b = input("Error message: ")
             error(a)

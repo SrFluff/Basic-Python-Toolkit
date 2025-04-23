@@ -59,6 +59,8 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 
 # Patch-notes
 
+1.11.2 - Added `wait()` and `version()` to the BPTTE.
+
 1.10.2 - Added the `musicLoop()` function.
 
 1.9.2 - Added the `version()` command, moved `import pygame` inside `def warning()`.
