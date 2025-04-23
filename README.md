@@ -59,6 +59,8 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 
 # Patch-notes
 
+1.11.3 - Added load and unload to the music shell
+
 1.11.2 - Added `wait()` and `version()` to the BPTTE.
 
 1.10.2 - Added the `musicLoop()` function.

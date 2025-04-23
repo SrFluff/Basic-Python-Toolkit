@@ -12,6 +12,13 @@ import datetime
 
 #Allows you to set a custom exit messasge when you call this function
 
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+
+try:
+    import pygame
+except ImportError:
+    print("ERROR: You don't seem to have Pygame installed, refer to README.md for further instructions")
+
 def emes(ems):
 
     cls()
@@ -203,12 +210,6 @@ def init():
 
 def warning(warning="No warning",x=0,y=0):
     
-    try:
-        import pygame
-    except ImportError:
-        print("Woah, you need Pygame to run this, refer to README.md for instructions")
-        exit()
-    
     main = True
     pygame.init()
     pygame.font.init()
@@ -228,11 +229,8 @@ def warning(warning="No warning",x=0,y=0):
 # The music shell, I'll add loading and unloading while in the shell later
 
 def musicLoop(pathToMusic,volume):
-    try:
-        from pygame import mixer
-    except ImportError:
-        print("Woah, you need Pygame to run this, refer to README.md for instructions")
-        exit()
+    
+    from pygame import mixer
     mixer.init()
     mixer.music.load(pathToMusic)
     mixer.music.set_volume(volume)
@@ -251,7 +249,20 @@ def musicLoop(pathToMusic,volume):
                 pause = True
         elif a == "help":
             print("p - Pauses and unpauses the song")
+            print("u - Unloads the current song")
+            print("l - loads a specific song")
             print("e - Exits the music shell")
         elif a == "e":
             mixer.music.stop()
             main = False
+        elif a == "u":
+            mixer.music.stop()
+            pause = False
+            mixer.music.unload()
+        elif a == "l":
+            mixer.music.stop()
+            pause = False
+            mixer.music.unload()
+            b = input("Song path: ")
+            mixer.music.load(b)
+            mixer.music.play()
