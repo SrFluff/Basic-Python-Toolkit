@@ -12,6 +12,10 @@ import datetime
 
 #Allows you to set a custom exit messasge when you call this function
 
+import music
+
+#Imports the music module, declutters the main file
+
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 
 try:
@@ -225,44 +229,3 @@ def warning(warning="No warning",x=0,y=0):
                 main = False
         screen.blit(my_font.render(warning,True,(0,0,0)),(x,y))
         pygame.display.flip()
-
-# The music shell, I'll add loading and unloading while in the shell later
-
-def musicLoop(pathToMusic,volume):
-    
-    from pygame import mixer
-    mixer.init()
-    mixer.music.load(pathToMusic)
-    mixer.music.set_volume(volume)
-    mixer.music.play()
-    pause = False
-    main = True
-    print("Type 'help' for help")
-    while main:
-        a = input("$ ")
-        if a == "p":
-            if pause:
-                mixer.music.unpause()
-                pause = False
-            else:
-                mixer.music.pause()
-                pause = True
-        elif a == "help":
-            print("p - Pauses and unpauses the song")
-            print("u - Unloads the current song")
-            print("l - loads a specific song")
-            print("e - Exits the music shell")
-        elif a == "e":
-            mixer.music.stop()
-            main = False
-        elif a == "u":
-            mixer.music.stop()
-            pause = False
-            mixer.music.unload()
-        elif a == "l":
-            mixer.music.stop()
-            pause = False
-            mixer.music.unload()
-            b = input("Song path: ")
-            mixer.music.load(b)
-            mixer.music.play()

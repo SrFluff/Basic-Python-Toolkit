@@ -56,9 +56,14 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
   - The standard way to return the SDK version.
 
 16. The music shell
-  - You can initialize a shell where you can play audio with the `musicLoop()` function. You must provide this function with a **path** and a volume(*between 0-1*).
+  - To initialize the shell you can run the `music.shell()` function. From here run `help` for a list of commands.
+
+17. The music library
+  - Inside `sdk.py` there's a library called `music` in here you have `play()`,`load()`,`unload()`,`volume()`,`stop()`,`pause()`,and `unpause()`. If  you're importing `sdk.py` you can run these functions like this: `sdk.music.<function>`.
 
 # Patch-notes
+
+1.12.3 - Moved the music shell into `music.py` and added music functions like `play()` and `pause()`
 
 1.11.3 - Added `load` and `unload` to the music shell
 
