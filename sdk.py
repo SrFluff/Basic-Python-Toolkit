@@ -56,7 +56,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.11.2"
+sdkver = "1.13.3"
 
 def version():
     global sdkver
@@ -212,7 +212,7 @@ def init():
 
 # It's a pop-up window, with a warning
 
-def warning(warning="No warning",x=0,y=0):
+def warning(warning="No warning",x=10,y=10):
     
     main = True
     pygame.init()
@@ -227,5 +227,21 @@ def warning(warning="No warning",x=0,y=0):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 main = False
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                gx = pygame.mouse.get_pos()[0]
+                gy = pygame.mouse.get_pos()[1]
+
+                if gx > 10 and gx < 190 and gy > 60 and gy < 90:
+                    main = False
         screen.blit(my_font.render(warning,True,(0,0,0)),(x,y))
+        gx = pygame.mouse.get_pos()[0]
+        gy = pygame.mouse.get_pos()[1]
+        if not gx > 10 or not gx < 190 or not gy > 60 or not gy < 90:
+            pygame.draw.rect(screen,(185,185,185),(10,60,180,30))
+            pygame.draw.rect(screen,(255,255,255),(12,62,176,26))
+        else:
+            pygame.draw.rect(screen,(155,155,155),(10,60,180,30))
+            pygame.draw.rect(screen,(200,200,200),(12,62,176,26))
+        
+        screen.blit(my_font.render("Ok",True,(0,0,0)),(90,65))
         pygame.display.flip()
