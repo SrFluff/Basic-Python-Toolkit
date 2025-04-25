@@ -45,6 +45,7 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 
 12. The terminal environment
   - Using `init()` you can start the Basic-Python-Toolkit Terminal Environment, where you can run some commands like `cls` and `error`.
+
 13. Colored text
   - You can print(or **return** colored text using the `color()` function, the format goes as follows: `color(text-in-color,color(w,r,g,b,y,c,W),print-if-true(True/False))`
 
@@ -59,7 +60,7 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 
 # Patch-notes
 
-1.11.3 - Added load and unload to the music shell
+1.11.3 - Added `load` and `unload` to the music shell
 
 1.11.2 - Added `wait()` and `version()` to the BPTTE.
 
