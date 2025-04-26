@@ -2,19 +2,23 @@ main = 0
 
 import os
 
-#Adds the time plugin, this allows us to wait a certain number of second
+# Adds the time plugin, this allows us to wait a certain number of second
 
 import time
 
-#Adds the datetime plugin that makes it possible to display date and time
+# Adds the datetime plugin that makes it possible to display date and time
 
 import datetime
 
-#Allows you to set a custom exit messasge when you call this function
+# Allows you to set a custom exit messasge when you call this function
 
 import music
 
-#Imports the music module, declutters the main file
+# Imports the music module, declutters the main file
+
+import color
+
+# Imports the color module, more decluttering
 
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 
@@ -56,7 +60,7 @@ def getsys():
 
 #Sets the SDK version
 
-sdkver = "1.13.3"
+sdkver = "1.14.3"
 
 def version():
     global sdkver
@@ -109,53 +113,6 @@ def datetime():
 
 #Colorama is the plugin required to color or highlight text
 
-try:
-    from colorama import Back, Fore
-except ImportError:
-    emes("Hey, by the way, you need Colorama to run this project, to install use pip, or apt :)")
-
-#Prints colored text
-
-def color(text="",col="w",prin=True):
-    match col:
-        case "w":
-            ret = Fore.WHITE + text + Fore.RESET
-        case "r":
-            ret = Fore.RED + text + Fore.RESET
-        case "g":
-            ret = Fore.GREEN + text + Fore.RESET
-        case "b":
-            ret = Fore.BLUE + text + Fore.RESET
-        case "y":
-            ret = Fore.YELLOW + text + Fore.RESET
-        case "c":
-            ret = Fore.CYAN + text + Fore.RESET
-        case "W":
-            ret = Fore.BLACK + Back.WHITE + text + Fore.RESET + Back.RESET
-    if prin:
-        print(ret)
-    else:
-        return ret
-
-# Prints highlighted text
-
-def hiw(hw):
-
-# Resets the background color and text color
-
-    print(Back.WHITE + Fore.BLACK + hw + Fore.RESET + Back.RESET)
-
-# Prints an error message
-
-def error(text="No error message",printf=True):
-    
-    # You can either print or return
-
-    if printf:
-        print(Fore.RED + "ERROR: " + text + Fore.RESET)
-    else:
-        return Fore.RED + "ERROR: " + text + Fore.RESET
-
 def init():
 
     print("Welcome to the Basic-Python-Toolkit Terminal Environment\n")
@@ -190,7 +147,7 @@ def init():
             b = input("Message: ")
             emes(b)
         elif a.split()[0] == "hiw":
-            hiw(a[4:])
+            color.hiw(a[4:])
         elif a == "credits":
             credits()
         elif a == "date":
@@ -202,9 +159,9 @@ def init():
         elif a == "getsys":
             print(getsys())
         elif a == "color":
-            a = input("Color (w,r,g,b,y,c,W): ")
+            a = int(input("Color (0-5): "))
             b = input("Text: ")
-            color(b,a)
+            color.color(b,a)
         elif a == "exit":
             cls()
             print("Thanks for using the Basic-Python-Toolkit Terminal Environment!\n")
