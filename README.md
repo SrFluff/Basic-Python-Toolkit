@@ -63,13 +63,15 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 
 # Patch-notes
 
-1.14.3 - Moved `error()`, `hiw()`, and `color()` into `color.py`
+1.15.3 - Added `music` to the BPTTE and cleaned up comments.
+
+1.14.3 - Moved `error()`, `hiw()`, and `color()` into `color.py`.
 
 1.13.3 - Added the `ok` button to `warning()`.
 
-1.12.3 - Moved the music shell into `music.py` and added music functions like `play()` and `pause()`
+1.12.3 - Moved the music shell into `music.py` and added music functions like `play()` and `pause()`.
 
-1.11.3 - Added `load` and `unload` to the music shell
+1.11.3 - Added `load` and `unload` to the music shell.
 
 1.11.2 - Added `wait()` and `version()` to the BPTTE.
 

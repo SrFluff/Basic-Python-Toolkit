@@ -35,7 +35,7 @@ def emes(ems):
 
     exit()
 
-#A more human-friendly version of time.sleep
+# A more human-friendly version of time.sleep
 
 def wait(sleep):
 
@@ -44,7 +44,7 @@ def wait(sleep):
 
 day = datetime.datetime.now()
 
-#Prints the OS, for stuff like Linux, or MacOS it will return Unix-like instead of the OS name
+# Prints the OS, for stuff like Linux, or MacOS it will return Unix-like instead of the OS name
 
 def getsys():
 
@@ -58,21 +58,21 @@ def getsys():
 
     return sys
 
-#Sets the SDK version
+# Sets the SDK version
 
-sdkver = "1.14.3"
+sdkver = "1.15.3"
 
 def version():
     global sdkver
     return sdkver
 
-#prints the current PBT version, made for providing credit
+# prints the current BPT version, made for providing credit
 
 def credits():
 
     print("Basic Python Toolkit version " + sdkver + " By SrFluff. (GitHub)")
 
-#Screen clearing
+# Screen clearing
 
 def cls():
     if os.name == "nt":
@@ -82,7 +82,7 @@ def cls():
 
 answer = "1"
 
-#Basic math functions
+# Basic math functions
 
 def add(b, c):
     return b + c
@@ -93,25 +93,25 @@ def sub(f, g):
 def div(h, i):
     return h / i
 
-#Using the datetime module it prints the weekday, month, day, and year
+# Using the datetime module it prints the weekday, month, day, and year
 
 def date():
 
     return day.strftime("%A") + ", " + day.strftime("%B") + " " + day.strftime("%d") + " " + day.strftime("%Y")
 
-#Using datetime this prints the time in 12h AM PM
+# Using datetime this prints the time in 12h AM PM
 
 def timed():
 
     return day.strftime("%I") + ":" + day.strftime("%M") + ":" + day.strftime("%S") + " " + day.strftime("%P")
 
-#Using datetime this prints both date and time
+# Using datetime this prints both date and time
 
 def datetime():
 
     return day.strftime("%A") + ", " + day.strftime("%B") + " " + day.strftime("%d") + " " + day.strftime("%Y") + " @ " + day.strftime("%I") + ":" + day.strftime("%M") + ":" + day.strftime("%S") + " " + day.strftime("%P")
 
-#Colorama is the plugin required to color or highlight text
+# Colorama is the plugin required to color or highlight text
 
 def init():
 
@@ -132,10 +132,13 @@ def init():
             print("datetime   - Prints both")
             print("getsys     - Prints the currently detected OS")
             print("version    - Prints the current SDK version")
+            print("music      - Initializes the music shell")
             print("wait       - Waits a specified amount of seconds")
             print("exit       - Exits the Basic-Python-Toolkit-Terminal-Environment\n")
         elif a == "cls":
             cls()
+        elif a == "music":
+            music.shell()
         elif a == "wait":
             wait(int(a))
         elif a == "version":
