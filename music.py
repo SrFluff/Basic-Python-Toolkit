@@ -2,7 +2,11 @@ import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 from pygame import mixer
 
+# Initializes the mixer
+
 mixer.init()
+
+# Most of these are just wrappers for mixer's functions
 
 def load(path="/no/path/given"):
     if path == "/no/path/given":
@@ -27,6 +31,8 @@ def unload():
 
 def play():
     mixer.music.play()
+
+# The music shell
 
 def shell():
     print("Type 'help' for help")
