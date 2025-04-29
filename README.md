@@ -7,61 +7,60 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 1. Basic math
   - Provides an easy way to add, subtract, divide, and multiply 2 numbers.
 
-2. Highlighted text
-  - Using the `color.hiw()` function, you can print highlighted text for stuff like menus.
-
-3. Screen clearing
+2. Screen clearing
   - Using the `cls()` function you can clear the screen on both Windows and Unix-like operating systems.
 
-4. Waiting a set amount of seconds
+3. Waiting a set amount of seconds
   - Use the `wait()` function to wait a certain amount of seconds, specified inbetween the parenthesis.
 
-5. Printing the OS using getsys()
+4. Printing the OS using getsys()
 
   - When you call the `getsys()` function, it will print the OS name, if you aren't on Windows it will print 'Unix-like'.
 
-6. Printing the credits
+5. Printing the credits
 
   - When you call `credits()` it will print the BPT version alongside with my name.
 
-7. Getting the date
+6. Getting the date
 
   - You can print the current date with the `date()` function in: wday, month day year style.
 
-8. Getting the time
+7. Getting the time
 
   - To print the time in AM PM 12h plus seconds use the `timed()` function.
 
-9. Getting both time and date
+8. Getting both time and date
 
   - Use the `timedate()` function to print both time and date together.
 
-10. Exit messages
+9. Exit messages
 
   - To set an exit message you can use `emes()` to set one, and call it when you want to close the program.
 
-11. Error message
+10. Error message
   - `color.error()` prints a spoof error message. It needs Colorama by the way.
 
-12. The terminal environment
+11. The terminal environment
   - Using `init()` you can start the Basic-Python-Toolkit Terminal Environment, where you can run some commands like `cls` and `error`.
 
-13. Colored text
-  - You can print(or **return** colored text using the `color.color()` function, the format goes as follows: `color(text-in-color,color(0-5),print-if-true(True/False))`
+12. Colored text
+  - You can print(or **return** colored text using the `color.color()` function, the format goes as follows: `color(text-in-color,color(0-6),print-if-true(True/False))`
 
-14. Warning window
+13. Warning window
   - You can draw a window with a warning message using the `warning()` function. This function does require **Pygame**
 
-15. Version
+14. Version
   - The standard way to return the SDK version.
 
-16. The music shell
+15. The music shell
   - To initialize the shell you can run the `music.shell()` function. From here run `help` for a list of commands.
 
-17. The music library
+16. The music library
   - Inside `sdk.py` there's a library called `music` in here you have `play()`,`load()`,`unload()`,`volume()`,`stop()`,`pause()`,and `unpause()`. If  you're importing `sdk.py` you can run these functions like this: `sdk.music.<function>`.
 
 # Patch-notes
+
+1.16.3 - Removed `color.hiw()` added highlighting to `color.color()`.
 
 1.15.3 - Added `music` to the BPTTE and cleaned up comments.
 

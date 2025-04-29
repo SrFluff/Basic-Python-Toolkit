@@ -60,7 +60,7 @@ def getsys():
 
 # Sets the SDK version
 
-sdkver = "1.15.3"
+sdkver = "1.16.3"
 
 def version():
     global sdkver
