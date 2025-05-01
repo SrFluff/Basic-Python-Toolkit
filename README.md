@@ -60,6 +60,8 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 
 # Patch-notes
 
+1.16.4 - Edited `color.error()`'s formatting a bit.
+
 1.16.3 - Removed `color.hiw()` added highlighting to `color.color()`.
 
 1.15.3 - Added `music` to the BPTTE and cleaned up comments.
