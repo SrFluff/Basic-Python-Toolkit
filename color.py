@@ -6,7 +6,7 @@ except ImportError:
     exit()
 
 def error(errorText="No error given"):
-    print(F.RED + "[ERROR]: " + errorText + F.RESET)
+    print(F.RED + "[ERROR]:" + errorText + F.RESET)
 def color(text="This is color text",col=0,ret=False):
     retu = ""
     if col == 0:
