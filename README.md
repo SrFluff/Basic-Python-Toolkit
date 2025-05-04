@@ -58,7 +58,12 @@ You have to install the **Colorama** & **Pygame** libraries through Pip, or your
 16. The music library
   - Inside `sdk.py` there's a library called `music` in here you have `play()`,`load()`,`unload()`,`volume()`,`stop()`,`pause()`,and `unpause()`. If  you're importing `sdk.py` you can run these functions like this: `sdk.music.<function>`.
 
+17. Json parsing
+  - To return a specific vriable from a json file run `parse(filename,variable)`
+
 # Patch-notes
+
+1.17.4 - Added the `parse()` function.
 
 1.16.4 - Edited `color.error()`'s formatting a bit.
 

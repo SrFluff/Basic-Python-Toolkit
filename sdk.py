@@ -16,6 +16,10 @@ import music
 
 # Imports the music module, declutters the main file
 
+import json
+
+# It's for parse()
+
 import color
 
 # Imports the color module, more decluttering
@@ -26,6 +30,12 @@ try:
     import pygame
 except ImportError:
     print("ERROR: You don't seem to have Pygame installed, refer to README.md for further instructions")
+
+def parse(filename,variable):
+    f = open(filename,"r")
+    x = json.loads(f.read())
+    f.close()
+    return x[variable]
 
 def emes(ems):
 
@@ -60,7 +70,7 @@ def getsys():
 
 # Sets the SDK version
 
-sdkver = "1.16.4"
+sdkver = "1.17.4"
 
 def version():
     global sdkver
